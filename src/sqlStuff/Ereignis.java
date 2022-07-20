@@ -1,11 +1,11 @@
 package sqlStuff;
 
 public class Ereignis {
-    private int id;
-    private String ereignis;
-    private int status;
-    private String von;
-    private String bis;
+    private final int id;
+    private final String ereignis;
+    private final int status;
+    private final String von;
+    private final String bis;
 
     public Ereignis(int id, String ereignis, int status, String von, String bis) {
         this.id = id;
@@ -19,36 +19,14 @@ public class Ereignis {
         return id;
     }
 
-    public String getEreignis() {
-        return ereignis;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public String getVon() {
-        return von;
-    }
-
-    public String getBis() {
-        return bis;
-    }
-
     public String toString() {
         String statString = "";
         String ergebnis = "";
 
         switch (status) {
-            case 0:
-                statString = "geplant";
-                break;
-            case 1:
-                statString = "fertig";
-                break;
-            case 2:
-                statString = "entfällt";
-                break;
+            case 0 -> statString = "geplant";
+            case 1 -> statString = "fertig";
+            case 2 -> statString = "entfällt";
         }
         if (von.equals("") && bis.equals(""))
             ergebnis = "ID: " + id + " Ereignis: " + ereignis + " Status: " + statString;
@@ -60,6 +38,6 @@ public class Ereignis {
             ergebnis = "ID: " + id + " Ereignis: " + ereignis + " Status: " + statString + " Von: " + von + " Bis: " + bis;
         return ergebnis;
     }
-    
+
 }
 

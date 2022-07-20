@@ -6,7 +6,7 @@ import java.util.List;
 
 public class SQL implements DatenbankSQL {
     private Connection verbindung;
-    private List<Ereignis> ereignisList = new ArrayList<>();
+    private final List<Ereignis> ereignisList = new ArrayList<>();
 
     public void connect() {
         try {
