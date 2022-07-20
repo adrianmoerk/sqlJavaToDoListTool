@@ -57,19 +57,8 @@ public class SQL implements DatenbankSQL {
         }
     }
 
-    public Connection getVerbindung() {
-        return verbindung;
-    }
-
-    public void setVerbindung(Connection verbindung) {
-        this.verbindung = verbindung;
-    }
-
     public List<Ereignis> getEreignisList() {
         return ereignisList;
     }
 
-    public void setEreignisList(List<Ereignis> ereignisList) {
-        this.ereignisList = ereignisList;
-    }
 }

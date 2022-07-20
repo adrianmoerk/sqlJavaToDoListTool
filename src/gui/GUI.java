@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GUI {
-    JList<Ereignis> guiEreignisList = new JList<Ereignis>();
+    JList<Ereignis> guiEreignisList = new JList<>();
 
     public GUI() {
         bestaetigenButton.addActionListener(new ActionListener() {

@@ -4,14 +4,10 @@ import sqlStuff.Ereignis;
 import sqlStuff.SQL;
 
 import javax.swing.*;
-import java.sql.Time;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 
 public class Logic {
-    JList<Ereignis> ereignisJList = new JList<Ereignis>();
+    JList<Ereignis> ereignisJList = new JList<>();
 
     public static void addContent(String ereignis, byte status, String von, String bis) {
         SQL sql = new SQL();
