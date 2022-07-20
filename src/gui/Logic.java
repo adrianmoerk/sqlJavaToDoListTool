@@ -4,6 +4,8 @@ import sqlStuff.Ereignis;
 import sqlStuff.SQL;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Logic {
@@ -17,7 +19,7 @@ public class Logic {
     }
 
 
-    // Methode die die Liste der Ereignisse in ein JList packt
+    // Methode die, die Liste der Ereignisse in ein JList packt
     public void anzeigeLabel() {
         SQL sql = new SQL();
         sql.connect();
@@ -27,6 +29,40 @@ public class Logic {
 
     }
 
+    public void filterEreignis(int status) {
+        SQL sql = new SQL();
+        sql.connect();
+        sql.sqlOut();
+        List<Ereignis> tempEreignisList;
+        tempEreignisList = sql.getEreignisList();
+        List<Ereignis> filteredEreignisList = new ArrayList<>();
+        switch (status) {
+            case 0:
+                for (Ereignis ereignis : tempEreignisList) {
+                    if (ereignis.getStatus() == 0) {
+                        filteredEreignisList.add(ereignis);
+                    }
+                }
+                break;
+            case 1:
+                for (Ereignis ereignis : tempEreignisList) {
+                    if (ereignis.getStatus() == 1) {
+                        filteredEreignisList.add(ereignis);
+                    }
+                }
+                break;
+            case 2:
+                for (Ereignis ereignis : tempEreignisList) {
+                    if (ereignis.getStatus() == 2) {
+                        filteredEreignisList.add(ereignis);
+                    }
+                }
+                break;
+
+        }
+        this.ereignisJList.setListData(filteredEreignisList.toArray(new Ereignis[0]));
+        sql.disconnect();
+    }
 
     public void allesLoeschen() {
         SQL sql = new SQL();

@@ -3,75 +3,73 @@ package gui;
 import sqlStuff.Ereignis;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class GUI {
     JList<Ereignis> guiEreignisList = new JList<>();
 
     public GUI() {
-        bestaetigenButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String ereignis = ereignisNameField.getText();
-                byte status = 0;
-                if (geplantRadioButton.isSelected()) {
-                    status = 0;
-                } else if (fertigRadioButton.isSelected()) {
-                    status = 1;
-                } else if (entfaelltRadioButton.isSelected()) {
-                    status = 2;
-                }
-                String von = "";
-                String bis = "";
-                if (terminEinplanenCheckBox.isSelected()) {
-                    von = vonInField.getText();
-                    bis = bisInField.getText();
-                }
-                Logic.addContent(ereignis, status, von, bis);
-                refresh();
-                ereignisNameField.setText("");
-            }
-        });
+        bestaetigenButton.addActionListener(e -> bestaetigen());
         refresh();
-        terminEinplanenCheckBox.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (terminEinplanenCheckBox.isSelected()) {
-                    vonInField.setEnabled(true);
-                    bisInField.setEnabled(true);
-
-                } else {
-                    vonInField.setEnabled(false);
-                    bisInField.setEnabled(false);
-                }
-            }
+        terminEinplanenCheckBox.addActionListener(e -> einplanenBoxLogic());
+        resetButton.addActionListener(e -> {
+            Logic logic = new Logic();
+            logic.allesLoeschen();
+            refresh();
         });
-        resetButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Logic logic = new Logic();
-                logic.allesLoeschen();
-                refresh();
-            }
-        });
-        deleteSelectedButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                delete();
-            }
-        });
+        deleteSelectedButton.addActionListener(e -> delete());
+        geplantCheckBox.addActionListener(e -> refresh());
+        fertigCheckBox.addActionListener(e -> refresh());
+        entfaelltCheckBox.addActionListener(e -> refresh());
     }
 
     public void refresh() {
         Logic logic = new Logic();
         logic.anzeigeLabel();
+        if (geplantCheckBox.isSelected()) {
+            logic.filterEreignis(0);
+        } else if (fertigCheckBox.isSelected()) {
+            logic.filterEreignis(1);
+        } else if (entfaelltCheckBox.isSelected()) {
+            logic.filterEreignis(2);
+        }
         terminAnzeigePanel.removeAll();
         terminAnzeigePanel.setLayout(new BoxLayout(terminAnzeigePanel, BoxLayout.Y_AXIS));
         this.guiEreignisList = logic.ereignisJList;
         terminAnzeigePanel.add(this.guiEreignisList);
         terminAnzeigePanel.revalidate();
         terminAnzeigePanel.repaint();
+    }
+
+    public void bestaetigen() {
+        String ereignis = ereignisNameField.getText();
+        byte status = 0;
+        if (geplantRadioButton.isSelected()) {
+            status = 0;
+        } else if (fertigRadioButton.isSelected()) {
+            status = 1;
+        } else if (entfaelltRadioButton.isSelected()) {
+            status = 2;
+        }
+        String von = "";
+        String bis = "";
+        if (terminEinplanenCheckBox.isSelected()) {
+            von = vonInField.getText();
+            bis = bisInField.getText();
+        }
+        Logic.addContent(ereignis, status, von, bis);
+        refresh();
+        ereignisNameField.setText("");
+    }
+
+    public void einplanenBoxLogic() {
+        if (terminEinplanenCheckBox.isSelected()) {
+            vonInField.setEnabled(true);
+            bisInField.setEnabled(true);
+
+        } else {
+            vonInField.setEnabled(false);
+            bisInField.setEnabled(false);
+        }
     }
 
     public void delete() {

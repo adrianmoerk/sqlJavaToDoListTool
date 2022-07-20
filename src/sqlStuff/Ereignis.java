@@ -21,7 +21,7 @@ public class Ereignis {
 
     public String toString() {
         String statString = "";
-        String ergebnis = "";
+        String ergebnis;
 
         switch (status) {
             case 0 -> statString = "geplant";
@@ -39,5 +39,8 @@ public class Ereignis {
         return ergebnis;
     }
 
+    public int getStatus() {
+        return status;
+    }
 }
 
