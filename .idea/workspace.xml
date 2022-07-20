@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2d68c14-2055-4e0d-938a-61c882fd350f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mariadb_java_client_3_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDoListSQL.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Starter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/GUI.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/Logic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mariadb-java-client-3.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sqlStuff/DatenbankSQL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sqlStuff/Ereignis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sqlStuff/SQL.java" afterDir="false" />
+    <list default="true" id="c2d68c14-2055-4e0d-938a-61c882fd350f" name="Changes" comment="ToDoListToolSql für GDS2:ADV">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/GUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/GUI.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sqlStuff/Ereignis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sqlStuff/Ereignis.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +94,14 @@
       <option name="presentableId" value="Default" />
       <updated>1657273381464</updated>
     </task>
+    <task id="LOCAL-00001" summary="ToDoListToolSql für GDS2:ADV">
+      <created>1658257428119</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658257428119</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,5 +114,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ToDoListToolSql für GDS2:ADV" />
+    <option name="LAST_COMMIT_MESSAGE" value="ToDoListToolSql für GDS2:ADV" />
   </component>
 </project>

@@ -17,9 +17,9 @@ public class GUI {
                 byte status = 0;
                 if (geplantRadioButton.isSelected()) {
                     status = 0;
-                } else if (entfaelltRadioButton.isSelected()) {
+                } else if (fertigRadioButton.isSelected()) {
                     status = 1;
-                } else if (okRadioButton.isSelected()) {
+                } else if (entfaelltRadioButton.isSelected()) {
                     status = 2;
                 }
                 String von = "";
@@ -84,12 +84,12 @@ public class GUI {
     public JPanel toDoListe;
     private JCheckBox mitBemerkungCheckBox;
     private JCheckBox mitZusInfoCheckBox;
-    private JCheckBox oeffnenGeplantCheckBox;
-    private JCheckBox okCheckBox;
+    private JCheckBox geplantCheckBox;
+    private JCheckBox fertigCheckBox;
     private JCheckBox entfaelltCheckBox;
     private JRadioButton geplantRadioButton;
-    private JRadioButton okRadioButton;
     private JRadioButton entfaelltRadioButton;
+    private JRadioButton fertigRadioButton;
     private JCheckBox terminEinplanenCheckBox;
     private JButton bestaetigenButton;
     private JPanel terminAnzeigePanel;
@@ -101,7 +101,4 @@ public class GUI {
     private JPanel filterPanel;
     private JButton resetButton;
     private JButton deleteSelectedButton;
-    private JList anzeigeListe;
-    private JTable anzeigeTable;
-    private JList ereignisListe;
 }

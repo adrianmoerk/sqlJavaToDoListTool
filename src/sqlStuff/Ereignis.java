@@ -44,10 +44,10 @@ public class Ereignis {
                 statString = "geplant";
                 break;
             case 1:
-                statString = "entfaellt";
+                statString = "fertig";
                 break;
             case 2:
-                statString = "ok";
+                statString = "entfällt";
                 break;
         }
         if (von.equals("") && bis.equals(""))
@@ -60,5 +60,6 @@ public class Ereignis {
             ergebnis = "ID: " + id + " Ereignis: " + ereignis + " Status: " + statString + " Von: " + von + " Bis: " + bis;
         return ergebnis;
     }
+    
 }
 

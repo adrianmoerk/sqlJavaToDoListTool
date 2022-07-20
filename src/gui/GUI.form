@@ -57,20 +57,20 @@
                   <text value="Geplant"/>
                 </properties>
               </component>
-              <component id="7af26" class="javax.swing.JRadioButton" binding="okRadioButton" default-binding="true">
+              <component id="7af26" class="javax.swing.JRadioButton" binding="entfaelltRadioButton">
                 <constraints>
                   <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Ok"/>
+                  <text value="Entfällt"/>
                 </properties>
               </component>
-              <component id="491da" class="javax.swing.JRadioButton" binding="entfaelltRadioButton">
+              <component id="491da" class="javax.swing.JRadioButton" binding="fertigRadioButton">
                 <constraints>
                   <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Enfällt"/>
+                  <text value="Fertig"/>
                 </properties>
               </component>
               <component id="cdef0" class="javax.swing.JCheckBox" binding="terminEinplanenCheckBox" default-binding="true">
@@ -94,7 +94,7 @@
                   <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Uhr"/>
+                  <text value="Start"/>
                 </properties>
               </component>
               <component id="8d28a" class="javax.swing.JLabel">
@@ -102,7 +102,7 @@
                   <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Uhr"/>
+                  <text value="Ende"/>
                 </properties>
               </component>
               <component id="a479b" class="javax.swing.JFormattedTextField" binding="vonInField">
@@ -190,20 +190,20 @@
                   <text value="ToDo's mit Status"/>
                 </properties>
               </component>
-              <component id="aa4e3" class="javax.swing.JCheckBox" binding="oeffnenGeplantCheckBox">
+              <component id="aa4e3" class="javax.swing.JCheckBox" binding="geplantCheckBox">
                 <constraints>
                   <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Öffnen/Geplant"/>
+                  <text value="Geplant"/>
                 </properties>
               </component>
-              <component id="215f2" class="javax.swing.JCheckBox" binding="okCheckBox" default-binding="true">
+              <component id="215f2" class="javax.swing.JCheckBox" binding="fertigCheckBox" default-binding="true">
                 <constraints>
                   <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <text value="Ok"/>
+                  <text value="Fertig"/>
                 </properties>
               </component>
               <component id="d34c2" class="javax.swing.JCheckBox" binding="entfaelltCheckBox">
@@ -257,6 +257,12 @@
       <member id="eff4f"/>
       <member id="7af26"/>
       <member id="491da"/>
+    </group>
+    <group name="filterGroup">
+      <member id="aa4e3"/>
+      <member id="aa4e3"/>
+      <member id="215f2"/>
+      <member id="d34c2"/>
     </group>
   </buttonGroups>
 </form>
