@@ -22,6 +22,9 @@ public class GUI {
         entfaelltCheckBox.addActionListener(e -> refresh());
     }
 
+    /**
+     * erneuert die Anzeige der Ereignisse
+     */
     public void refresh() {
         Logic logic = new Logic();
         logic.anzeigeLabel();
@@ -40,6 +43,9 @@ public class GUI {
         terminAnzeigePanel.repaint();
     }
 
+    /**
+     * Methode die das Ereignis in die Datenbank einträgt
+     */
     public void bestaetigen() {
         String ereignis = ereignisNameField.getText();
         byte status = 0;
@@ -61,6 +67,9 @@ public class GUI {
         ereignisNameField.setText("");
     }
 
+    /**
+     * Methode die, die Felder ein- und ausblendet
+     */
     public void einplanenBoxLogic() {
         if (terminEinplanenCheckBox.isSelected()) {
             vonInField.setEnabled(true);
@@ -72,6 +81,9 @@ public class GUI {
         }
     }
 
+    /**
+     * Methode die das ausgewählte Ereignis löscht
+     */
     public void delete() {
         Logic logic = new Logic();
         logic.loeschen(guiEreignisList.getSelectedValue().getId());
@@ -80,8 +92,6 @@ public class GUI {
 
 
     public JPanel toDoListe;
-    private JCheckBox mitBemerkungCheckBox;
-    private JCheckBox mitZusInfoCheckBox;
     private JCheckBox geplantCheckBox;
     private JCheckBox fertigCheckBox;
     private JCheckBox entfaelltCheckBox;

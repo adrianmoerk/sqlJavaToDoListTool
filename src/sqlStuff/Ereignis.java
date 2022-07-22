@@ -19,6 +19,9 @@ public class Ereignis {
         return id;
     }
 
+    /**
+     * @return ereignis als String
+     */
     public String toString() {
         String statString = "";
         String ergebnis;

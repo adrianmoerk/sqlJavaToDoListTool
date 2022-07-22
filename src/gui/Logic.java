@@ -11,6 +11,12 @@ import java.util.List;
 public class Logic {
     JList<Ereignis> ereignisJList = new JList<>();
 
+    /**
+     * @param ereignis Ereignis-Objekt
+     * @param status   Status des Ereignisses (0 = geplant, 1 = fertig, 2 = entfällt)
+     * @param von      Startdatum des Ereignisses
+     * @param bis      Enddatum des Ereignisses
+     */
     public static void addContent(String ereignis, byte status, String von, String bis) {
         SQL sql = new SQL();
         sql.connect();
@@ -19,7 +25,9 @@ public class Logic {
     }
 
 
-    // Methode die, die Liste der Ereignisse in ein JList packt
+    /**
+     * erstellt JList mit Ereignissen
+     */
     public void anzeigeLabel() {
         SQL sql = new SQL();
         sql.connect();
@@ -29,6 +37,9 @@ public class Logic {
 
     }
 
+    /**
+     * @param status Status des Ereignisses, 0 = geplant, 1 = fertig, 2 = entfällt
+     */
     public void filterEreignis(int status) {
         SQL sql = new SQL();
         sql.connect();
@@ -64,6 +75,9 @@ public class Logic {
         sql.disconnect();
     }
 
+    /**
+     * Methode die alle Ereignisse aus der Datenbank löscht
+     */
     public void allesLoeschen() {
         SQL sql = new SQL();
         sql.connect();
@@ -71,6 +85,9 @@ public class Logic {
         sql.disconnect();
     }
 
+    /**
+     * @param primaryKey Die ID des zu löschenden Elements
+     */
     public void loeschen(int primaryKey) {
         SQL sql = new SQL();
         sql.connect();

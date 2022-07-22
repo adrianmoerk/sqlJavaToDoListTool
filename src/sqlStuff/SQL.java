@@ -8,6 +8,9 @@ public class SQL implements DatenbankSQL {
     private Connection verbindung;
     private final List<Ereignis> ereignisList = new ArrayList<>();
 
+    /**
+     * Stellt verbindung zur SQL Datenbank her
+     */
     public void connect() {
         try {
             this.verbindung = DriverManager.getConnection(url, user, password);
@@ -16,6 +19,10 @@ public class SQL implements DatenbankSQL {
         }
     }
 
+    /**
+     * @param query SQL-Query
+     *              Führt SQL-Query aus
+     */
     public void sqlIn(String query) {
         try {
             this.verbindung.createStatement().executeQuery(query);
@@ -24,6 +31,9 @@ public class SQL implements DatenbankSQL {
         }
     }
 
+    /**
+     * gibt Liste mit Ereignissen zurück
+     */
     public void sqlOut() {
         try {
             String query = "SELECT * FROM todo.`todo-liste`;";
@@ -36,6 +46,10 @@ public class SQL implements DatenbankSQL {
         }
     }
 
+    /**
+     * @param primaryKey Primärschlüssel des Ereignisses
+     *                   Löscht Ereignis mit Primärschlüssel primaryKey
+     */
     public void sqlDel(int primaryKey) {
         try {
             String query = "DELETE FROM todo.`todo-liste`;";
@@ -49,6 +63,9 @@ public class SQL implements DatenbankSQL {
         }
     }
 
+    /**
+     * Verbindung zur SQL Datenbank wird beendet
+     */
     public void disconnect() {
         try {
             this.verbindung.close();
