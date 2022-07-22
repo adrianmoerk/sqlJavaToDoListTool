@@ -4,6 +4,9 @@ import sqlStuff.Ereignis;
 
 import javax.swing.*;
 
+/**
+ * GUI Klasse für die GUI
+ */
 public class GUI {
     JList<Ereignis> guiEreignisList = new JList<>();
 

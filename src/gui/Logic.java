@@ -76,7 +76,9 @@ public class Logic {
     }
 
     /**
-     * Methode die alle Ereignisse aus der Datenbank löscht
+     * Methode die sqlDel aufruft mit dem Spezial Key 0, um alle Ereignisse zu löschen
+     *
+     * @see sqlStuff.SQL#sqlDel(int)
      */
     public void allesLoeschen() {
         SQL sql = new SQL();
