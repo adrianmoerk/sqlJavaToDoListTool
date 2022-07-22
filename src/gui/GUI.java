@@ -23,6 +23,7 @@ public class GUI {
         geplantCheckBox.addActionListener(e -> refresh());
         fertigCheckBox.addActionListener(e -> refresh());
         entfaelltCheckBox.addActionListener(e -> refresh());
+        allesAnzeigenCheckBox.addActionListener(e -> refresh());
     }
 
     /**
@@ -112,4 +113,5 @@ public class GUI {
     private JPanel filterPanel;
     private JButton resetButton;
     private JButton deleteSelectedButton;
+    private JCheckBox allesAnzeigenCheckBox;
 }
